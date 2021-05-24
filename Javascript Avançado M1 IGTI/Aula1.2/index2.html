@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 1.2 Interface UIEvent</title>
+</head>
+
+<body>
+
+
+    <p>Verifica se os cookies estao liberados!</p>
+
+
+
+    <p>Redimensionou a pagina: <span id="teste"></span> vezes.</p>
+
+
+</body>
+
+<script>
+    window.addEventListener("resize", countResize);
+
+    let count = 0;
+
+    function countResize() {
+        let txtElement = count += 1;
+
+        document.getElementById("teste").innerHTML = txtElement
+    }
+</script>
+
+</html>

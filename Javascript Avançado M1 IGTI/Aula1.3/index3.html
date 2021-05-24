@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .selected {
+
+            background: #0f0;
+        }
+
+        li {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    Selecione os itens na lista:
+    <br>
+    <ul id="ul">
+        <li>Desenvolvimento de Javascript</li>
+        <li>Arquitetura de aplicacoes Web</li>
+        <li>Banco de dados</li>
+        <li>Desenvolvimento backende</li>
+    </ul>
+
+</body>
+
+</html>
+
+
+<script>
+    let ul = document.getElementById("ul");
+
+    ul.addEventListener("click", selectItem);
+
+    function selectItem(event) {
+        if (event.target.tagName != "LI") return;
+
+        if (event.ctrlKey || event.metaKey) {
+            toggleSelect(event.target);
+        } else {
+            singleSelect(event.target);
+        }
+    }
+
+
+
+    function singleSelect(li) {
+
+
+        let selected = ul.querySelectorAll('.selected');
+
+        for (let elem of selected) {
+            elem.classList.remove('selected');
+        }
+
+        li.classList.add('selected')
+    }
+
+
+    function toggleSelect(li) {
+        li.classList.toggle('selected')
+    }
+</script>
