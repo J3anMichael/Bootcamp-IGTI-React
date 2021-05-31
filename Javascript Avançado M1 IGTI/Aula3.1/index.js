@@ -97,7 +97,7 @@ p6.then( function acao1 (res) { console.log(`${res} da acao 1`); return res})
 .then( function acao3 (res) { console.log(`${res} da acao 3`); return res})
 
 
-//EXEMPLO 7 -
+//EXEMPLO 7 - ENCADEAMENTO DE THENs E CATCHs COM EXCECAO NO MEIO DO FLUXO
 
 const p7 = new Promise((resolve, reject) => {
     if (Math.random() > 0.5){
