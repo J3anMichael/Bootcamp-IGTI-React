@@ -104,7 +104,7 @@ let pizza = new Chart(document.getElementById("pizza"), {
            }
        } 
     }
-})
+});
 
 setInterval(getData, 10000000);
 
